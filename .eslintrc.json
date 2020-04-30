@@ -21,7 +21,8 @@
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "react-hooks"
     ],
     "rules": {
       "react/jsx-props-no-spreading" : "off",
@@ -29,6 +30,8 @@
       "no-unused-expressions": "off",
       "eslintimport/prefer-default-export": "off",
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+      "react-hooks/exhaustive-deps": "warn",
+      "react-hooks/rules-of-hooks": "error",
       "import/extensions": ["error", "ignorePackages", {
         "js": "never",
         "jsx": "never",
