@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FiPower, FiClock } from 'react-icons/fi';
 import {
   Container,
@@ -8,6 +8,8 @@ import {
   Content,
   Schedule,
   NextAppointment,
+  Section,
+  Appointment,
   Calendar,
 } from './styles';
 
@@ -15,6 +17,8 @@ import logoImg from '../../assets/logo.svg';
 import { useAuth } from '../../hooks/auth';
 
 const Dashboard: React.FC = () => {
+  const [selectedDate, setSelectedDate] = useState(new Date());
+
   const { signOut, user } = useAuth();
 
   return (
@@ -64,6 +68,63 @@ const Dashboard: React.FC = () => {
               </span>
             </div>
           </NextAppointment>
+
+          <Section>
+            <strong>Manha</strong>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars1.githubusercontent.com/u/23245187?s=460&u=300acc104e5bccb9059e10975d4b3c33f8ec44f0&v=4"
+                  alt=""
+                />
+
+                <strong>Diego Fernandes</strong>
+              </div>
+            </Appointment>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars1.githubusercontent.com/u/23245187?s=460&u=300acc104e5bccb9059e10975d4b3c33f8ec44f0&v=4"
+                  alt=""
+                />
+
+                <strong>Diego Fernandes</strong>
+              </div>
+            </Appointment>
+          </Section>
+
+          <Section>
+            <strong>Tarde</strong>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars1.githubusercontent.com/u/23245187?s=460&u=300acc104e5bccb9059e10975d4b3c33f8ec44f0&v=4"
+                  alt=""
+                />
+
+                <strong>Diego Fernandes</strong>
+              </div>
+            </Appointment>
+          </Section>
+
         </Schedule>
         <Calendar />
       </Content>
