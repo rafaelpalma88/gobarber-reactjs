@@ -32,6 +32,7 @@
         "react-hooks"
     ],
     "rules": {
+      "camelcase": "off",
       "react/jsx-props-no-spreading" : "off",
       "react/prop-types" : "off",
       "no-unused-expressions": "off",
