@@ -36,6 +36,7 @@
       "react/jsx-props-no-spreading" : "off",
       "react/prop-types" : "off",
       "no-unused-expressions": "off",
+      "import/no-duplicates" : "off",
       "eslintimport/prefer-default-export": "off",
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
       "react-hooks/exhaustive-deps": "warn",
