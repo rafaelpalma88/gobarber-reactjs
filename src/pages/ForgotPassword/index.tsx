@@ -10,7 +10,7 @@ import {
 } from './styles';
 import getValidationErrors from '../../utils/getValidationErros';
 
-import { useAuth } from '../../hooks/auth';
+// import { useAuth } from '../../hooks/auth';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import { useToast } from '../../hooks/toast';
