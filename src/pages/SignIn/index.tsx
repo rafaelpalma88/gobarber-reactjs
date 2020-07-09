@@ -24,8 +24,8 @@ interface SignInFormData {
 const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
-  const { signIn } = useAuth();
   const { addToast } = useToast();
+  const { signIn } = useAuth();
   const history = useHistory();
 
   const handleSubmit = useCallback(async (data: SignInFormData) => {
@@ -33,8 +33,11 @@ const SignIn: React.FC = () => {
       formRef.current?.setErrors({});
 
       const schema = Yup.object().shape({
-        email: Yup.string().required('E-mail obrigatório').email('Digite um e-mail válido'),
-        password: Yup.string().required('Senha obrigatória'),
+        email: Yup.string()
+          .required('E-mail obrigatório')
+          .email('Digite um e-mail válido'),
+        password: Yup.string()
+          .required('Senha obrigatória'),
       });
 
       await schema.validate(data, {
@@ -64,7 +67,6 @@ const SignIn: React.FC = () => {
   }, [signIn, addToast, history]);
 
   return (
-
     <Container>
       <Content>
         <AnimationContainer>
@@ -92,5 +94,4 @@ const SignIn: React.FC = () => {
     </Container>
   );
 };
-
 export default SignIn;
